@@ -1,0 +1,62 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+env/
+ENV/
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+*.egg
+
+# State and runtime data
+data/state.json
+data/state.json.bak
+data/shahi_state.json
+data/shahi_state.json.bak
+data/*.db
+data/*.sqlite
+data/*.sqlite3
+
+# Logs
+*.log
+logs/
+data/*.log
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# Generated / downloaded
+xray/
+xray/
+xray-linux-amd64.zip
+mtproto-proxy/
+data/cf_subnets.txt.bak
+data/sni-list.txt.bak
+
+# Secrets (NEVER commit)
+.env
+.env.*
+*.pem
+*.key
+!certs/.gitkeep
+
+# Test artifacts
+.pytest_cache/
+.tox/
+.coverage
+htmlcov/
+
+# Build artifacts
+worker.js.bak
