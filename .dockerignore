@@ -1,0 +1,40 @@
+# Exclude heavy/unnecessary build context — keeps build fast and tiny.
+# Anything not listed is INCLUDED.
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+env/
+ENV/
+
+# State / runtime
+data/state.json
+data/state.json.bak
+data/shahi_state.json
+data/shahi_state.json.bak
+data/scanned/
+data/*.db
+data/*.sqlite
+data/*.sqlite3
+*.log
+
+# Editor / OS / test artifacts
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.pytest_cache/
+htmlcov/
+
+# Generated
+xray/
+xray-linux-amd64.zip
+mtproto-proxy/
+worker.js.bak
