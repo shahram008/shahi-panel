@@ -2,12 +2,15 @@
 # Shahi Panel Dockerfile
 #
 # Build options:
-#   --build-arg SKIP_MTPROXY=1   → skip MTProxy compile (saves ~420MB; recommended
-#                                  for constrained deploy targets like Railway/VibeNest
-#                                  free tiers). Panel still runs; TG MTProto feature
-#                                  will be unavailable.
+#   --build-arg SKIP_MTPROXY=0   → build with MTProxy support (full
+#                                  upstream behavior; needs ~420MB extra build
+#                                  space, won't fit on VibeNest free tier).
+#   --build-arg SKIP_MTPROXY=1   → skip MTProxy compile (default for tight
+#                                  deploy targets like VibeNest free tier).
+#                                  Panel still runs; TG MTProto feature will be
+#                                  unavailable.
 #
-# Default: builds with MTProxy support (matches upstream SpiderPanel).
+# Default: SKIP_MTPROXY=1 (slim).
 
 ARG PYTHON_VERSION=3.13-slim
 ARG SKIP_MTPROXY=1
